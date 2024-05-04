@@ -15,4 +15,6 @@ dependencies:
   - pyyaml==6.0.1
   - torch==2.1.1
   - tqdm==4.65.0
+  # Note: This one is only used for data loading, thus MLflow missed it during logging.
+  - torchvision
 name: mlflow-env
