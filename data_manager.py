@@ -29,13 +29,5 @@ class DataManager:
         # self.training_data, self.testing_data = tf.keras.datasets.cifar10.load_data()
         self.trainloader, self.testloader = load_data(partition_id=0)  # TODO adjust
 
-    # def get_data(self):
     def get_data_loaders(self):
         return self.trainloader, self.testloader
-        # return self.training_data, self.testing_data
-
-    # def __init__(self):
-    #     self.training_data, self.testing_data = tf.keras.datasets.cifar10.load_data()
-
-    # def get_data(self):
-    #     return self.training_data, self.testing_data
