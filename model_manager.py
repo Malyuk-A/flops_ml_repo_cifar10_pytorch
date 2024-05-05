@@ -6,6 +6,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from data_manager import DataManager
+from flops_utils.ml_repo_templates import ModelManagerTemplate
 from tqdm import tqdm
 
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -33,7 +34,7 @@ class Net(nn.Module):
         return self.fc3(x)
 
 
-class ModelManager:
+class ModelManager(ModelManagerTemplate):
     def __init__(self):
         self.model = Net().to(DEVICE)
 

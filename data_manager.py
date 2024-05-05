@@ -1,11 +1,12 @@
 from typing import Any, Tuple
 
+from flops_utils.ml_repo_templates import DataManagerTemplate
 from flwr_datasets import FederatedDataset
 from torch.utils.data import DataLoader
 from torchvision.transforms import Compose, Normalize, ToTensor
 
 
-class DataManager:
+class DataManager(DataManagerTemplate):
     def __init__(self):
         # self.training_data, self.testing_data = tf.keras.datasets.cifar10.load_data()
         self._load_data()
