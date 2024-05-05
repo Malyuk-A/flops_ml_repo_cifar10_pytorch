@@ -1,1 +1,0 @@
-# flops_test_cifar10
