@@ -38,7 +38,6 @@ class ModelManager(ModelManagerTemplate):
     def __init__(self):
         self.model = Net().to(DEVICE)
 
-    # Only for developing/testing
     def prepare_data(self) -> None:
         self.trainloader, self.testloader = DataManager().get_data()
 
