@@ -8,10 +8,9 @@ from torchvision.transforms import Compose, Normalize, ToTensor
 
 class DataManager(DataManagerTemplate):
     def __init__(self):
-        # self.training_data, self.testing_data = tf.keras.datasets.cifar10.load_data()
-        self._load_data()
+        self._prepare_data()
 
-    def _load_data(self, partition_id=1) -> None:
+    def _prepare_data(self, partition_id=1) -> None:
         """Load partition CIFAR10 data."""
         fds = FederatedDataset(dataset="cifar10", partitioners={"train": 3})
         partition = fds.load_partition(partition_id)
