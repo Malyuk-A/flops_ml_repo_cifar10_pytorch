@@ -5,10 +5,9 @@ from typing import Any, Tuple
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from data_manager import DataManager
 from flops_utils.ml_repo_templates import ModelManagerTemplate
 from tqdm import tqdm
-
-from flops_ml_repo_cifar10_pytorch.data_manager import DataManager
 
 warnings.filterwarnings("ignore", category=UserWarning)
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
